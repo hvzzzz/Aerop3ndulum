@@ -1,19 +1,12 @@
 \begin{thebibliography}{1}
 
+\bibitem{gunnel2017tuning}
+O.~Gunnel and A.~Ankarali, ``Tuning pid controller using genetic algorithm and
+  particle swarm optimization algorithm for single propeller pendulum,'' {\em
+  ICAME2017}, 2017.
+
 \bibitem{reyes2019drones}
 F.~Reyes, {\em Drones: Cinemática, Dinámica y Control de Cuadricópteros}.
 \newblock Alfaomega grupo editor, 2019.
-
-\bibitem{pozar2012microwave}
-D.~M. Pozar, ``Microwave engineering,'' 2012.
-
-\bibitem{cstpage}
-D.~Systemes, ``Wilkinson power divider simulation self-guided learning.'' url{
-  https://www.3ds.com/products-services/simulia/resources/wilkinson-power-divider/},
-  2018.
-
-\bibitem{wilkinson1960n}
-E.~J. Wilkinson, ``An n-way hybrid power divider,'' {\em IRE Transactions on
-  microwave theory and techniques}, vol.~8, no.~1, pp.~116--118, 1960.
 
 \end{thebibliography}
