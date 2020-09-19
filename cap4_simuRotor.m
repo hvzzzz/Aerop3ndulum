@@ -1,0 +1,10 @@
+clc;clear all;close all;
+format short;
+ti=0;h=0.0025;tf=15;
+ts=ti:h:tf;
+opciones=odeset('RelTol',1e-03,'AbsTol', 1e-03,'InitialStep', h,'MaxStep',h);
+condiciones_iniciales=[0;0];
+[t,x]=ode45('cap4_ModeloDinamicoRotor',ts,condiciones_iniciales,opciones);
+%[t,x]=ode45('pend_control',ts,condiciones_iniciales,opciones);
+plot(t,x(:,1)*180/pi,t,x(:,2));
+%plot(t,x(:,1),t,x(:,2));
