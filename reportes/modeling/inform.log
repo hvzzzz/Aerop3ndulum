@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2019.5.27)  19 SEP 2020 18:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2019.5.27)  19 SEP 2020 19:29
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -547,8 +547,8 @@ Package: booktabs 2005/04/14 v1.61803 publication quality tables
 \@lastruleclass=\count116
 \@thisrulewidth=\dimen152
 ) (/mnt/c/Users/hanan/Desktop/P/aerop3ndulum/reportes/modeling/inform.aux
-LaTeX Info: Redefining \. on input line 12.
-LaTeX Info: Redefining \% on input line 12.
+LaTeX Info: Redefining \. on input line 22.
+LaTeX Info: Redefining \% on input line 22.
 )
 \openout1 = `inform.aux'.
 
@@ -616,26 +616,28 @@ Package grfext Info: Graphics extension search list:
 (grfext)             \AppendGraphicsExtensions on input line 452.
  (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
-)) (/mnt/c/Users/hanan/Desktop/P/aerop3ndulum/reportes/modeling/inform.bbl) [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
+)) (/mnt/c/Users/hanan/Desktop/P/aerop3ndulum/reportes/modeling/inform.bbl [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
+
+]) [2
 
 ] (/mnt/c/Users/hanan/Desktop/P/aerop3ndulum/reportes/modeling/inform.aux
-LaTeX Info: Redefining \. on input line 12.
-LaTeX Info: Redefining \% on input line 12.
+LaTeX Info: Redefining \. on input line 22.
+LaTeX Info: Redefining \% on input line 22.
 ) ) 
 Here is how much of TeX's memory you used:
- 4388 strings out of 493029
- 63034 string characters out of 6136234
- 145903 words of memory out of 5000000
- 7867 multiletter control sequences out of 15000+600000
+ 4404 strings out of 493029
+ 63301 string characters out of 6136234
+ 146918 words of memory out of 5000000
+ 7883 multiletter control sequences out of 15000+600000
  34539 words of font info for 65 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 38i,23n,30p,558b,384s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 38i,23n,30p,556b,384s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on /mnt/c/Users/hanan/Desktop/P/aerop3ndulum/reportes/modeling/inform.pdf (1 page, 112457 bytes).
+Output written on /mnt/c/Users/hanan/Desktop/P/aerop3ndulum/reportes/modeling/inform.pdf (2 pages, 117359 bytes).
 PDF statistics:
- 53 PDF objects out of 1000 (max. 8388607)
- 38 compressed objects within 1 object stream
+ 56 PDF objects out of 1000 (max. 8388607)
+ 40 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
