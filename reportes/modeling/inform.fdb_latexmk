@@ -1,16 +1,16 @@
 # Fdb version 3
-["bibtex inform"] 1600560645 "inform.aux" "inform.bbl" "inform" 1600561799
+["bibtex inform"] 1600560645 "inform.aux" "inform.bbl" "inform" 1600561964
   "/usr/share/texlive/texmf-dist/bibtex/bst/base/ieeetr.bst" 1292289607 18361 1a00e58565e7f19bf2b3e1bfb82254ae ""
   "bibliografia.bib" 1600560634 2068 6e8618f6c5ae0f614c3c848d31427e31 ""
-  "inform.aux" 1600561799 1227 62b19b575214d8a172653885d33b5d0d ""
+  "inform.aux" 1600561964 1227 62b19b575214d8a172653885d33b5d0d ""
   "inform.bcf" 0 -1 0 ""
   (generated)
   "inform.blg"
   "inform.bbl"
-["pdflatex"] 1600561798 "/mnt/c/Users/hanan/Desktop/P/aerop3ndulum/reportes/modeling/inform.tex" "/mnt/c/Users/hanan/Desktop/P/aerop3ndulum/reportes/modeling/inform.pdf" "inform" 1600561799
+["pdflatex"] 1600561963 "/mnt/c/Users/hanan/Desktop/P/aerop3ndulum/reportes/modeling/inform.tex" "/mnt/c/Users/hanan/Desktop/P/aerop3ndulum/reportes/modeling/inform.pdf" "inform" 1600561964
   "/etc/texmf/web2c/texmf.cnf" 1547944145 1101 af7716885e081ab43982cab7b4672c1a ""
-  "/mnt/c/Users/hanan/Desktop/P/aerop3ndulum/reportes/modeling/inform.aux" 1600561799 1227 62b19b575214d8a172653885d33b5d0d ""
-  "/mnt/c/Users/hanan/Desktop/P/aerop3ndulum/reportes/modeling/inform.tex" 1600561797 5758 c72f6152657aea9e04d6d257c3cfc148 ""
+  "/mnt/c/Users/hanan/Desktop/P/aerop3ndulum/reportes/modeling/inform.aux" 1600561964 1227 62b19b575214d8a172653885d33b5d0d ""
+  "/mnt/c/Users/hanan/Desktop/P/aerop3ndulum/reportes/modeling/inform.tex" 1600561962 5764 3cd45cc81e257d0da9e8851c5f9b2bc6 ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1272929888 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/adobe/times/ptmb7t.tfm" 1136768653 2172 fd0c924230362ff848a33632ed45dc23 ""
@@ -82,12 +82,12 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1503343927 31343 93828589fb0cea665e553ee5a17ad2d4 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1558990396 1863403 f3ff9a4253bcb5fb9a9baaf0c572cb01 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1558990458 3854383 f97fa6a786f61ad94db0ca9a356c8f2b ""
-  "inform.aux" 1600561799 1227 62b19b575214d8a172653885d33b5d0d ""
+  "inform.aux" 1600561964 1227 62b19b575214d8a172653885d33b5d0d ""
   "inform.bbl" 1600560645 1605 a9f789df78972508ad5a7001effdd0d2 "bibtex inform"
-  "inform.tex" 1600561797 5758 c72f6152657aea9e04d6d257c3cfc148 ""
+  "inform.tex" 1600561962 5764 3cd45cc81e257d0da9e8851c5f9b2bc6 ""
   (generated)
-  "/mnt/c/Users/hanan/Desktop/P/aerop3ndulum/reportes/modeling/inform.log"
   "/mnt/c/Users/hanan/Desktop/P/aerop3ndulum/reportes/modeling/inform.pdf"
-  "inform.log"
-  "inform.aux"
   "inform.pdf"
+  "inform.aux"
+  "inform.log"
+  "/mnt/c/Users/hanan/Desktop/P/aerop3ndulum/reportes/modeling/inform.log"
