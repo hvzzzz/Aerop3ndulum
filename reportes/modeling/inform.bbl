@@ -30,9 +30,4 @@ D.~Mellinger, N.~Michael, and V.~Kumar, ``Trajectory generation and control for
   precise aggressive maneuvers with quadrotors,'' {\em The International
   Journal of Robotics Research}, vol.~31, no.~5, pp.~664--674, 2012.
 
-\bibitem{gill2017propeller}
-R.~Gill and R.~D'Andrea, ``Propeller thrust and drag in forward flight,'' in
-  {\em 2017 IEEE Conference on Control Technology and Applications (CCTA)},
-  pp.~73--79, IEEE, 2017.
-
 \end{thebibliography}

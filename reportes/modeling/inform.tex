@@ -13,11 +13,11 @@
 %\tableofcontents%tabla de contenidos
 %\listoffigures%lista de figuras
 \title{Desempeño de Esquemas de Control Tipo Hiperbólico para Control de Posición de Aeropéndulo}
-\author{Hanan Ronaldo Quispe Condori, Joel Huamán Zárate, Héctor Lionel García Hurtado, Roly Sandro Gutierrez Benito, María Teresa Vera Percca}
+\author{Hanan Ronaldo Quispe Condori, Joel Huamán Zárate, Héctor Lionel García Hurtado, Roly Sandro Gutierrez Benito, María Teresa Vera Percca, Nicoll Alexandra Sotomayor Mamani}
 %\markboth{INFORME CIRCAE 2019-08-05-G1-P3-001}{} % Codigo del informe que corresponde a: semestre | mes | dia | numero de grupo con la G antepuesta | numero de proyecto con la P antepuesta | número de informe
 \maketitle
 \begin{abstract}
-    Se propone la aplicación de una familia de esquemas de control tipo hiperbólico de alto desempeño para el problema de control de posición angular del aeropendulo, los metodos de control clasicos resuelven este problema satisfactoriamente en el sistema linealizado mas el enfoque no lineal permite un control preciso sobre toda la dinámica del sistema en mención.
+    Se propone la aplicación de una familia de esquemas de control tipo hiperbólico de alto desempeño basadas en la técnica de moldeo de energía para el problema de control de posición del aeropendulo.
 \end{abstract}
 \section{Introducción}
 Texto aca\cite{gunnel2017tuning}.
@@ -25,12 +25,12 @@ Texto aca\cite{gunnel2017tuning}.
 \label{sec:modeling}
 Se usará el enfoque de dinámica analítica, este enfoque usa las ecuaciones de movimiento de Euler-Lagrange para la obtención del modelo dinámico del sistema, se eligio este metodo debido a que se obtiene una estructura matemática bien definida el cual se integra de manera natural con la teoria de estabilidad de Lyapunov para el análisis de estabilidad para sistemas dinámicos lineales y no lineales sin importar el orden del sistema.\cite{reyes2019drones}
 
-Se obtendrá la cinemática directa del sistema en función de la coordenada generalizada $\theta$.
+Se obtendrá la cinemática directa del sistema en función de la posición angular $q$.
 
 \begin{equation}
     \begin{bmatrix}  x \\ y \\
     \end{bmatrix}=
-    \begin{bmatrix} Lsen(\theta) \\ -L\cos(\theta)  \\
+    \begin{bmatrix} l_csen(q) \\ -l_c\cos(q)  \\
     \end{bmatrix}
     \label{eq:cin_direc}
 \end{equation}
@@ -43,8 +43,8 @@ Apartir de \ref{eq:cin_direc} se podrá obtener la cinemática diferencial para 
         y \\
     \end{bmatrix}=
     \begin{bmatrix}
-        \dot{\theta}L\cos(\theta)  \\
-        \dot{\theta}L\sen(\theta)  \\
+        \dot{\theta}l_c\cos(q)  \\
+        \dot{\theta}l_c\sen(q)  \\
     \end{bmatrix}
     \label{eq:speed}
 \end{equation}
@@ -53,8 +53,8 @@ La rapidez lineal esta dada por
 
 \begin{equation}
     \begin{split}
-        \|v\|^2&=v.v^T=\sqrt{\dot{\theta}^2L^2sen^2{\theta}+\dot{\theta}^2L^2cos^2{\theta}}^2\\
-        \|v\|^2&=L^2\dot{\theta}^2
+        \|v\|^2&=v.v^T=\sqrt{\dot{q}^2l_c^2sen^2({q})+\dot{q}^2l_c^2cos^2({q})}^2\\
+        \|v\|^2&=l_c^2\dot{q}^2
     \end{split}
     \label{eq:speed_mod}
 \end{equation}
@@ -63,10 +63,8 @@ Usando la expresión de la rapidez lineal del sistema se procedera a calcular el
 
 \begin{equation}
     \begin{split}
-        \mathcal{K}(\theta,\dot{\theta}) &= \frac{1}{2}mL^2\dot\theta^2\\
-        \mathcal{K}(\theta,\dot{\theta}) &= \frac{1}{2}J\dot\theta^2\\
-        \mathcal{U}(\theta) &=  -m_1g\frac{L}{2}\cos{\theta} -m_2gL\cos{\theta} \\
-        \mathcal{U}(\theta) &= -gL\cos{\theta(\frac{m_1}{2}+m_2)}
+        \mathcal{K}(q,\dot{q}) &= \frac{1}{2}ml_c^2\dot q^2+\frac{1}{2}I\dot q^2\\
+        \mathcal{U}(q) &= gml_c\lbrack1-\cos({q})\rbrack
     \end{split}
     \label{eq:energy}
 \end{equation}
@@ -74,7 +72,8 @@ Usando la expresión de la rapidez lineal del sistema se procedera a calcular el
 El lagrangiano del sistema esta dado por
 \begin{equation}
     \begin{split}
-        \mathcal{L}(\theta,\dot{\theta})=\mathcal{K}(\theta,\dot{\theta})-\mathcal{U}(\theta)=\frac{1}{2}J\dot{\theta}^2+gL\cos{\theta}(\frac{m_1}{2}+m_2)
+        \mathcal{L}(q,\dot{q})&=\mathcal{K}(q,\dot{q})-\mathcal{U}(q)\\
+        \mathcal{L}(q,\dot{q})&=\frac{1}{2}\lbrack ml_c^2\dot q^2+I\dot{q}^2\rbrack-gml_c\lbrack1-\cos({q})\rbrack
     \end{split}
     \label{eq:lagrange}
 \end{equation}
@@ -83,10 +82,10 @@ Las ecuaciones de Euler lagrange para el sistema tienen la siguiente forma
 
 \begin{equation}
     \frac{d}{dt}\begin{bmatrix}
-        \frac{\partial \mathcal{L}(\theta,\dot{\theta})}{\partial\dot{\theta}}
+        \frac{\partial \mathcal{L}(q,\dot{q})}{\partial\dot{q}}
     \end{bmatrix}-\begin{bmatrix}
-        \frac{\partial \mathcal{L}(\theta,\dot{\theta})}{\partial \theta}
-    \end{bmatrix}+f_f(f_e,\dot{\theta})=\tau
+        \frac{\partial \mathcal{L}(q,\dot{q})}{\partial q}
+    \end{bmatrix}+f_f(f_e,\dot{q})=\tau
     \label{eq:eu_lagran}
 \end{equation}
 
@@ -95,31 +94,72 @@ Considerando el lagrangiano se tienen las siguientes expresiones
 \begin{equation}
     \begin{split}
         \begin{bmatrix}
-            \frac{\partial \mathcal{L}(\theta,\dot{\theta})}{\partial\dot{\theta}}
-        \end{bmatrix}&=J\dot{\theta}\\
+            \frac{\partial \mathcal{L}(q,\dot{q})}{\partial\dot{q}}
+        \end{bmatrix}&=\lbrack ml_c^2+I\rbrack\dot{q}\\
         \frac{d}{dt}\begin{bmatrix}
-            \frac{\partial\mathcal{L}(\theta,\dot{\theta})}{\partial\dot{\theta}}
-        \end{bmatrix}&=J\ddot{\theta}\\
+            \frac{\partial\mathcal{L}(q,\dot{q})}{\partial\dot{q}}
+        \end{bmatrix}&=\lbrack ml_c^2+I\rbrack\ddot{q}\\
         \begin{bmatrix}
-            \frac{\partial \mathcal{L}(\theta,\dot{\theta})}{\partial \theta}
-        \end{bmatrix}&=-Lg\sen(\theta)(m_2 + \frac{m_1}{2})\\
+            \frac{\partial \mathcal{L}(q,\dot{q})}{\partial q}
+        \end{bmatrix}&=-gml_c\sen(q)\\
     \end{split}
     \label{eq:dq}
 \end{equation}
 
-El modelo dinámico del sistema considerando el fenomeno de fricción esta dado por:
+El modelo dinámico del sub-sistema brazo-hélice considerando el fenomeno de fricción esta dado por:
 
 \begin{equation}
-    J\ddot{\theta}+Lg\sen(\theta)(m_2+\frac{m_1}{2})+c\dot{\theta}=\tau
+    \lbrack ml_c^2+I\rbrack\ddot{q}+gml_c\sen(q)+b\dot{q}=\tau_{ri}
     \label{eq:din_model}
 \end{equation}
 
-Además del modelo dinámico del pendulo tambien se tendrá que obtener un modelo dinámico del rotor, esto para obtener un modelo que describa en su totalidad el comportamiento físico del sistema.
-\\
-Típicamente el modelo de fricción utilizado para el rotor, considera que el torque de rotor $\tau_r$ es directamente proporcional al cuadrado de su velocidad rotacional $\omega^2_r$\cite{nemati2014modeling},\cite{schulz2015high},\cite{koehl2012aerodynamic},\cite{mellinger2012trajectory}. En la literatura tambien se reportan metologias experimentales para rotores basculantes \cite{gill2017propeller}. Dentro
+Comunmente se considera que el torque de rotor $\tau_r$ es directamente proporcional al cuadrado de su velocidad rotacional $\omega^2_r$ \cite{nemati2014modeling},\cite{schulz2015high},\cite{koehl2012aerodynamic},\cite{mellinger2012trajectory}, pero esto no considera la dinámica interna del rotor, ni las perdidas por fricción. En este estudio se hará uso del modelo LuGre para el modelamiento de la fricción del rotor ya que este es el modelo más completo reportado en la literatura\cite{reyes2019drones}.
+Segun el modelo Lugre la estructura dinámica para el rotor esta dada por:
 
+\begin{equation}
+    \begin{split}
+        \dot{z}_{ri}&=\omega_{ri}-\sigma_{0_{ri}}\frac{|\omega_{ri}|}{\mu_{ri}(\omega_{ri})}z_{ri}\\
+        \tau_{f_{ri}}&=\sigma_{0_{ri}}z_{ri}+\sigma_{1_{ri}}\dot{z_{ri}}+f_{ri}(\omega_{ri})
+    \end{split}
+    \label{eq:lugre}
+\end{equation}
 
+Además
+    $\mu_{ri}(\omega_{ri})=\tau_{c_{ri}}+\lbrack\tau_{s_{ri}}-\tau_{c_{ri}}\rbrack e^{-|\frac{\omega_{ri}}{\omega_{s_{ri}}}|^2}$ es una función con la fricción de Coulomb y el efecto Stribeck. 
+Donde
+    \begin{itemize}
+        \item $\dot{z}_{ri}$ Micromovimientos con velocidad.
+        \item $\tau_{f_{ri}}$ Torque de fricción en el rotor.
+        \item $\sigma_{0_{ri}}$ Constante de rigidez de fricción de Lugre.
+        \item $\sigma_{1_{ri}}$ Coeficiente de amortiguamiento asociado a $\dot{z_{ri}}$.
+        \item $f_{ri}(\omega_{ri})=b_{ri}\omega_{ri}$ Fricción viscosa.
+        \item $\tau_{c_{ri}}$ Coeficiente de fricción de Coulomb.
+        \item $\tau_{s_{ri}}$ Coeficiente de fricción estatico.
+        \item $\omega_{s_{ri}}$ Constante de Stribeck. 
+    \end{itemize}
 
+Usando este modelo el modelo dinámico del rotor con hélice queda de la siguiente forma.
+
+\begin{equation}
+    \tau_{ri}=I_{ri}\dot{\omega}_{ri}+\sigma_{0_{ri}}z_{ri}+\sigma_{1_{ri}}\dot{z}_{ri}+b_{ri}\omega_{ri}
+    \label{eq:fric_rotor}
+\end{equation}
+Donde 
+\begin{itemize}
+    \item $I_{ri}$ Momento de Inercia del rotor.
+    \item $\tau_{ri}$ Torque aplicado (señal de control) 
+\end{itemize} 
+
+Finalmente el modelo dinámico del sistema estará dado por 
+\begin{equation}
+    \frac{d}{dt}\begin{bmatrix}
+        q \\ \dot{q}\\ {z}_{ri} \\ \omega_{ri}
+    \end{bmatrix}=\begin{bmatrix}
+        \dot{q}\\ \frac{1}{ml_c^2+I}\lbrack \tau_{ri}-gml_c\sen(q)-b\dot{q} \rbrack \\ \omega_{ri}-\sigma_{0_{ri}}\frac{|\omega_{ri}|}{\mu_{ri}(\omega_{ri})}z_{ri}\\ \frac{1}{I_{ri}}\lbrack \tau_{ri}-\sigma_{0_{ri}}z_{ri}\sigma_{1_{ri}}\dot{z}_{ri}-b_{ri}\omega_{ri}\rbrack
+    \end{bmatrix}
+    \label{eq:sys_din_model}
+\end{equation}
+Donde 
 %\vspace{10mm}
 \bibliographystyle{ieeetr}
 \bibliography{bibliografia}

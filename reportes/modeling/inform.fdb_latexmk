@@ -1,16 +1,16 @@
 # Fdb version 3
-["bibtex inform"] 1600562749 "inform.aux" "inform.bbl" "inform" 1600562751
+["bibtex inform"] 1601777657 "inform.aux" "inform.bbl" "inform" 1601777706
   "/usr/share/texlive/texmf-dist/bibtex/bst/base/ieeetr.bst" 1292289607 18361 1a00e58565e7f19bf2b3e1bfb82254ae ""
   "bibliografia.bib" 1600560634 2068 6e8618f6c5ae0f614c3c848d31427e31 ""
-  "inform.aux" 1600562750 1227 8fbc24ce3454e5ad73083fe9dc4e2fa1 ""
+  "inform.aux" 1601777658 1293 6089e6527b102b994d3c507dddb5c25a ""
   "inform.bcf" 0 -1 0 ""
   (generated)
   "inform.blg"
   "inform.bbl"
-["pdflatex"] 1600562749 "/mnt/c/Users/hanan/Desktop/P/aerop3ndulum/reportes/modeling/inform.tex" "/mnt/c/Users/hanan/Desktop/P/aerop3ndulum/reportes/modeling/inform.pdf" "inform" 1600562751
+["pdflatex"] 1601777657 "/mnt/c/Users/hanan/Desktop/P/aerop3ndulum/reportes/modeling/inform.tex" "/mnt/c/Users/hanan/Desktop/P/aerop3ndulum/reportes/modeling/inform.pdf" "inform" 1601777706
   "/etc/texmf/web2c/texmf.cnf" 1547944145 1101 af7716885e081ab43982cab7b4672c1a ""
-  "/mnt/c/Users/hanan/Desktop/P/aerop3ndulum/reportes/modeling/inform.aux" 1600562750 1227 8fbc24ce3454e5ad73083fe9dc4e2fa1 ""
-  "/mnt/c/Users/hanan/Desktop/P/aerop3ndulum/reportes/modeling/inform.tex" 1600562746 5790 3e657f3d829fa46e0d7b793a451f1881 ""
+  "/mnt/c/Users/hanan/Desktop/P/aerop3ndulum/reportes/modeling/inform.aux" 1601777658 1293 6089e6527b102b994d3c507dddb5c25a ""
+  "/mnt/c/Users/hanan/Desktop/P/aerop3ndulum/reportes/modeling/inform.tex" 1601777705 7435 420d51724cdeeff2998a06d92b0033f3 ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1272929888 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/adobe/times/ptmb7t.tfm" 1136768653 2172 fd0c924230362ff848a33632ed45dc23 ""
@@ -25,8 +25,10 @@
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb" 1248133631 30251 6afa5cb1d0204815a708a080681d4674 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb" 1248133631 36299 5f9df58c2139e7edcf37c8fca4bd384d ""
+  "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb" 1248133631 37912 77d683123f92148345f3fc36a38d9ab1 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb" 1248133631 36281 c355509802a035cadc5f15869451dcee ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1248133631 35752 024fb6c41858982481f6968b5fc26508 ""
+  "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb" 1248133631 31809 8670ca339bf94e56da1fc21c80635e2a ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb" 1248133631 32762 224316ccc9ad3ca0423a14971cfa7fc1 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1248133631 32569 5e5ddc8df908dea60932f3c484a54c0d ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb" 1248133631 32716 08e384dc442464e7285e891af9f45947 ""
@@ -82,12 +84,12 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1503343927 31343 93828589fb0cea665e553ee5a17ad2d4 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1558990396 1863403 f3ff9a4253bcb5fb9a9baaf0c572cb01 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1558990458 3854383 f97fa6a786f61ad94db0ca9a356c8f2b ""
-  "inform.aux" 1600562750 1227 8fbc24ce3454e5ad73083fe9dc4e2fa1 ""
-  "inform.bbl" 1600562749 1605 a9f789df78972508ad5a7001effdd0d2 "bibtex inform"
-  "inform.tex" 1600562746 5790 3e657f3d829fa46e0d7b793a451f1881 ""
+  "inform.aux" 1601777658 1293 6089e6527b102b994d3c507dddb5c25a ""
+  "inform.bbl" 1601777657 1397 5bc45a848b33e8ec664154a9f04543b4 "bibtex inform"
+  "inform.tex" 1601777705 7435 420d51724cdeeff2998a06d92b0033f3 ""
   (generated)
   "inform.aux"
-  "/mnt/c/Users/hanan/Desktop/P/aerop3ndulum/reportes/modeling/inform.pdf"
-  "/mnt/c/Users/hanan/Desktop/P/aerop3ndulum/reportes/modeling/inform.log"
   "inform.log"
+  "/mnt/c/Users/hanan/Desktop/P/aerop3ndulum/reportes/modeling/inform.log"
+  "/mnt/c/Users/hanan/Desktop/P/aerop3ndulum/reportes/modeling/inform.pdf"
   "inform.pdf"
