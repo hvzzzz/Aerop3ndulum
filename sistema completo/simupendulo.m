@@ -2,9 +2,9 @@ clc;
 clear all;
 close all;
 format short 
-%animacion=1; % 0:Deshabilita 1:Habilita animación
+%animacion=1; % 0:Deshabilita 1:Habilita animaciï¿½n
  
-%Parámetros de simulación ------------------------------------------------%
+%Parï¿½metros de simulaciï¿½n ------------------------------------------------%
     ti=0; %tiempo inicial (segundos)   
     tfinal=20; %tiempo de final (segundos)
     h=0.0025; %periodo de muestreo (segundos)
@@ -13,7 +13,7 @@ format short
 %-------------------------------------------------------------------------%
 
 ci=[0; 0;0;0];
-%Solución numérica del sistema -------------------------------------------%
+%Soluciï¿½n numï¿½rica del sistema -------------------------------------------%
  %   [t,x]=ode45('pendulo',[ti; tfinal],[89.999*pi/180; 0],opciones);
     [t,x]=ode45('sys_din_model',ts, ci,opciones);
 
@@ -31,6 +31,5 @@ ci=[0; 0;0;0];
      xlabel('Tiempo[seg]');ylabel('Error de Posicion[grad]');
      subplot(3,1,3);    plot(t,velocidad1_motor)
      xlabel('Tiempo[seg]');ylabel('Velocidad del Motor[rpm]');
-   
    
      
