@@ -1,11 +1,11 @@
 function  xp=sys_din_model(t,x)
 
 %Vector de estados (entradas) --------------------------------------------%
-    q=x(1);  %posici�n articular
-    qp=x(2); %velocidad articular
+    z_q=x(1);
+    z_ri=x(2);
+    q=x(3);  %posici�n articular
+    qp=x(4); %velocidad articular
     omega_ri=x(5);
-    z_ri=x(4);
-    z_q=x(3);
 %-------------------------------------------------------------------------%    
 
 %Par�metros del p�ndulo --------------------------------------------------%
@@ -60,10 +60,10 @@ function  xp=sys_din_model(t,x)
 %tau_ri=kp_ri*omega_tilde;
     omegap_ri=(tau-tauf_ri)/I_ri;
 
-    xp=[qp;    %xp(1)=x(2) velocidad articular
-        qpp;
-        omegap_ri;%omegap_ri
+    xp=[z_qp;    %xp(1)=x(2) velocidad articular
         zp_ri;
-        z_qp];  %xp(2)=qpp  aceleracion articular
+        qp;%omegap_ri
+        qpp;
+        omegap_ri];  %xp(2)=qpp  aceleracion articular
 %-------------------------------------------------------------------------%
 end

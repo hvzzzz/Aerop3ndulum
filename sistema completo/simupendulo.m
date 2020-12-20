@@ -19,11 +19,11 @@ global n h tau1
     % subplot(2,2,1);    plot(t,180*x(:,1)/pi,t,90-180*x(:,1)/pi)
     % subplot(2,2,2);    plot(t,x(:,2))
     % subplot(2,2,3);    plot(x(:,2),90-180*x(:,1)/pi)
-     error_pos=90-180*x(:,1)/pi;%[grad/seg]
-     pos=180*x(:,1)/pi;%[grad/seg]
-     velocidad_articular=180*x(:,2)/pi;%[grad/seg]
-     velocidad_motor=x(:,3);%[rad/seg]
-     velocidad1_motor=x(:,3)*60/(2*pi);%[rpm]
+     error_pos=90-180*x(:,3)/pi;%[grad/seg]
+     pos=180*x(:,3)/pi;%[grad/seg]
+     velocidad_articular=180*x(:,4)/pi;%[grad/seg]
+     velocidad_motor=x(:,5);%[rad/seg]
+     velocidad1_motor=x(:,5)*60/(2*pi);%[rpm]
      subplot(3,1,1);    plot(t,pos)
      xlabel('Tiempo[seg]');ylabel('Posicion Articular[grad]');
      subplot(3,1,2);    plot(t,error_pos)
