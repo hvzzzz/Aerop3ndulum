@@ -1,9 +1,7 @@
-clc;
-clear all;
-close all;
+clc; clear all; close all;
 format short 
 %animacion=1; % 0:Deshabilita 1:Habilita animaci�n
- 
+global n h tau1
 %Par�metros de simulaci�n ------------------------------------------------%
     ti=0; %tiempo inicial (segundos)   
     tfinal=20; %tiempo de final (segundos)
@@ -11,14 +9,15 @@ format short
     ts=ti:h:tfinal; %vector de tiempo
     opciones=odeset('RelTol' ,1e-06, 'AbsTol',1e-06,'InitialStep' ,h,'MaxStep',h);
 %-------------------------------------------------------------------------%
-
-ci=[0; 0;0;0];
+    n=1;
+    tau1=0;
+    ci=[0;0;0;0;0];
 %Soluci�n num�rica del sistema -------------------------------------------%
  %   [t,x]=ode45('pendulo',[ti; tfinal],[89.999*pi/180; 0],opciones);
     [t,x]=ode45('sys_din_model',ts, ci,opciones);
 
-   % subplot(2,2,1);    plot(t,180*x(:,1)/pi,t,90-180*x(:,1)/pi)
-   %  subplot(2,2,2);    plot(t,x(:,2))
+    % subplot(2,2,1);    plot(t,180*x(:,1)/pi,t,90-180*x(:,1)/pi)
+    % subplot(2,2,2);    plot(t,x(:,2))
     % subplot(2,2,3);    plot(x(:,2),90-180*x(:,1)/pi)
      error_pos=90-180*x(:,1)/pi;%[grad/seg]
      pos=180*x(:,1)/pi;%[grad/seg]

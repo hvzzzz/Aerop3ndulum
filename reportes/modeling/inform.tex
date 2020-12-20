@@ -153,9 +153,9 @@ Donde
 Finalmente el modelo dinámico del sistema estará dado por 
 \begin{equation}
     \frac{d}{dt}\begin{bmatrix}
-        q \\ \dot{q}\\ {z}_{ri} \\ \omega_{ri}
+        q \\ \dot{q}\\ {z}_{ri} \\ {z}_{q} \\\omega_{ri} 
     \end{bmatrix}=\begin{bmatrix}
-        \dot{q}\\ \frac{1}{ml_c^2+I}\lbrack \tau_{ri}-gml_c\sen(q)-b\dot{q} \rbrack \\ \omega_{ri}-\sigma_{0_{ri}}\frac{|\omega_{ri}|}{\mu_{ri}(\omega_{ri})}z_{ri}\\ \frac{1}{I_{ri}}\lbrack \tau_{ri}-\sigma_{0_{ri}}z_{ri}\sigma_{1_{ri}}\dot{z}_{ri}-b_{ri}\omega_{ri}\rbrack
+        \dot{q}\\ \frac{1}{ml_c^2+I}\lbrack \tau_{ri}-gml_c\sen(q)- \sigma_{0_{q}}{z}_{q}-\sigma_{1_{q}}\dot{z}_{q} -b\dot{q}\rbrack \\ \omega_{ri}-\sigma_{0_{ri}}\frac{|\omega_{ri}|}{\mu_{ri}(\omega_{ri})}z_{ri}\\ \dot{q}-\sigma_{0_{q}}\lbrack\frac{|\dot{q}|}{\tau_{c_{q}}+\lbrack\tau_{s_{q}}-\tau_{c_{q}}\rbrack e^{-|\frac{\dot{q}}{\dot{q}_{sq}}|^2}} \rbrack {z}_{q} \\\frac{1}{I_{ri}}\lbrack \tau_{ri}-\sigma_{0_{ri}}z_{ri}-\sigma_{1_{ri}}\dot{z}_{ri}-b_{ri}\omega_{ri}\rbrack
     \end{bmatrix}
     \label{eq:sys_din_model}
 \end{equation}
