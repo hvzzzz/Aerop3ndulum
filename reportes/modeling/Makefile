@@ -1,6 +1,6 @@
 all:
 	pdflatex inform
-	bibtex bibliografia
+	bibtex inform
 	pdflatex inform
 clean: 
 	rm -f *.aux *.bbl *.log *.blg *.dvi *.toc

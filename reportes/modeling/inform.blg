@@ -1,0 +1,51 @@
+This is BibTeX, Version 0.99d (TeX Live 2019/Debian)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: inform.aux
+The style file: ieeetr.bst
+Database file #1: abntex2-options.bib
+Warning--entry type for "abnt-url-package=url" isn't style-file defined
+--line 199 of file abntex2-options.bib
+Database file #2: biblio.bib
+Warning--all relevant fields are empty in abnt-url-package=url
+You've used 7 entries,
+            1876 wiz_defined-function locations,
+            518 strings with 4726 characters,
+and the built_in function-call counts, 1855 in all, are:
+= -- 183
+> -- 60
+< -- 0
++ -- 23
+- -- 16
+* -- 120
+:= -- 248
+add.period$ -- 8
+call.type$ -- 7
+change.case$ -- 5
+chr.to.int$ -- 0
+cite$ -- 8
+duplicate$ -- 100
+empty$ -- 190
+format.name$ -- 16
+if$ -- 456
+int.to.chr$ -- 0
+int.to.str$ -- 7
+missing$ -- 7
+newline$ -- 25
+num.names$ -- 6
+pop$ -- 28
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 73
+stack$ -- 0
+substring$ -- 136
+swap$ -- 40
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 1
+while$ -- 18
+width$ -- 8
+write$ -- 65
+(There were 2 warnings)

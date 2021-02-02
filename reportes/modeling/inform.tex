@@ -1,6 +1,9 @@
 %% Estructura principal para un reporte de Trabajos intersemanales CIRCAE %%
 \documentclass[a4paper]{IEEEtran} %tamaño del papel y el tipo de transcripción que será IEEE
 \usepackage[utf8]{inputenc} %el tipo de codificación que incluye símbolos como la tilde
+
+\usepackage[hyperpageref]{backref}
+\usepackage[alf]{abntex2cite}
 \usepackage[spanish]{babel} % hacemos que nuestro documentación vaya en español
 \usepackage{cite} % citas bibliográficas
 \usepackage{graphicx} %gráficos, usaremos solo .jpg o .png con estándares que ya veremos
@@ -12,18 +15,20 @@
 \begin{document}
 %\tableofcontents%tabla de contenidos
 %\listoffigures%lista de figuras
-\title{Desempeño de Esquemas de Control Tipo Hiperbólico para Control de Posición de Aeropéndulo}
+%\title{Desempeño de Esquemas de Control Tipo Hiperbólico para Control de Posición de Aeropéndulo}
+\title{Hacia una Mejor Explotación de Controladores Basados en Moldeo de Energia para Control de Posición de Aeropéndulo}
 \author{Hanan Ronaldo Quispe Condori, Joel Huamán Zárate, Héctor Lionel García Hurtado, Roly Sandro Gutierrez Benito, María Teresa Vera Percca, Nicoll Alexandra Sotomayor Mamani}
 %\markboth{INFORME CIRCAE 2019-08-05-G1-P3-001}{} % Codigo del informe que corresponde a: semestre | mes | dia | numero de grupo con la G antepuesta | numero de proyecto con la P antepuesta | número de informe
 \maketitle
 \begin{abstract}
-    Se propone la aplicación de una familia de esquemas de control tipo hiperbólico de alto desempeño basadas en la técnica de moldeo de energía para el problema de control de posición del aeropendulo.
+    Presentamos un análisis de posibles estrategias para explotar la capacidad de esquemas de control existentes basados en la metodología de moldeo de energía propuesta por Takegaki y Arimoto [cita]. En muchas aplicaciones, en especial el control de posición, es importante entender como obtener el mejor beneficio de los esquemas de control existentes. Nosotros realizamos experimentos usando 5 esquemas de control distintos usando un prototipo experimental de aeropendulo. Nosotros tambien comparamos los resultados experimentales de cada esquema con los resultados obtenidos usando un modelo teorico del sistema.
+    %Se propone la aplicación de una familia de esquemas de control tipo hiperbólico de alto desempeño basadas en la técnica de moldeo de energía para el problema de control de posición del aeropendulo.
 \end{abstract}
 \section{Introducción}
 Texto aca\cite{gunnel2017tuning}.
 \section{Modelamiento Matemático}
 \label{sec:modeling}
-Se usará el enfoque de dinámica analítica, este enfoque usa las ecuaciones de movimiento de Euler-Lagrange para la obtención del modelo dinámico del sistema, se eligio este metodo debido a que se obtiene una estructura matemática bien definida el cual se integra de manera natural con la teoria de estabilidad de Lyapunov para el análisis de estabilidad para sistemas dinámicos lineales y no lineales sin importar el orden del sistema.\cite{reyes2019drones}
+Se utilizó el enfoque de dinámica analítica, este enfoque usa las ecuaciones de movimiento de Euler-Lagrange para la obtención del modelo dinámico del sistema, se eligio este metodo debido a que se obtiene una estructura matemática bien definida el cual se integra de manera natural con la teoria de estabilidad de Lyapunov para el análisis de estabilidad para sistemas dinámicos lineales y no lineales sin importar el orden del sistema.\cite{reyes2019drones}
 
 Se obtendrá la cinemática directa del sistema en función de la posición angular $q$.
 
@@ -162,5 +167,5 @@ Finalmente el modelo dinámico del sistema estará dado por
 Donde 
 %\vspace{10mm}
 \bibliographystyle{ieeetr}
-\bibliography{bibliografia}
+\bibliography{biblio}
 \end{document}
