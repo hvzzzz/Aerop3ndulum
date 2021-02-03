@@ -1,6 +1,6 @@
 from machine import Pin, UART
-import uos
-uos.dupterm(None,1)
+#import uos
+#uos.dupterm(None,1)
 uart=UART(0,115200)
 uart.init(115200,bits=8,parity=None,stop=1)
 led=Pin(5,Pin.OUT)

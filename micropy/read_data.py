@@ -16,6 +16,7 @@ while flag:
             if(received==b'9'):
                 if(received==b'9'):
                     flag=False
+                    data.write(b'ok')
 while True:
 #for i in range (20):
     #print(i)
@@ -23,5 +24,5 @@ while True:
     rece_data=data.read(4)
     print(rece_data)
     #data.write('on'.encode())
-    time.sleep(0.1)
+    #time.sleep(0.1)
     #data.write('off'.encode())

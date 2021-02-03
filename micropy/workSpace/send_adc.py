@@ -1,5 +1,4 @@
 from machine import Pin, PWM, ADC, UART
-import uos
 import time 
 
 def put_ceros(lect):
@@ -17,7 +16,7 @@ def send_marker(flag):
     else:
         return None
 
-uos.dupterm(None,1)
+#uos.dupterm(None,1)
 uart=UART(0,115200)
 uart.init(115200,bits=8,parity=None,stop=1)
 
@@ -30,7 +29,7 @@ flag=True
 while True:
     if uart.any()>0:
         #uart.write(i)
-        lect=input_adc.readline()
+        lect=input_adc.read()
         if(lect==b'ok'):
             flag=False
         #print(type(lect))
@@ -48,3 +47,4 @@ while True:
             send_marker(flag)
         i=i+1
 #falta hacer que una vez ya se tenga reconocido el marcador la pc le avise y que el micro ya no envie el marcador
+
