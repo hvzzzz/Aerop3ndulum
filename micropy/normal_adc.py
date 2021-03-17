@@ -13,13 +13,15 @@ input_adc=ADC(0)
 lect=0
 i=0
 flag=True
-start_time=time.time()
+#start_time=time.time()
+start_time=time.ticks_us()
 seconds=10
 print('Empieza el Experimento')
 while True:
-    current_time = time.time()
-    elapsed_time = current_time - start_time
-
+    #current_time = time.time()
+    current_time = time.ticks_us()
+    #elapsed_time = current_time - start_time
+    elapsed_time = time.ticks_diff(current_time,start_time)*1e-6
     if elapsed_time > seconds:
         break
     #if uart.any()>0:

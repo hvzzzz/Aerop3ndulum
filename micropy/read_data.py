@@ -1,13 +1,19 @@
-import serial
 import time
 import numpy as np
+import os
 import matplotlib.pyplot as plt
-print("Start")
-port="COM5"
-data=serial.Serial(port, 115200)
-print("Connected")
-data.flushInput()
+d=os.popen('ampy --port COM5 get 'd.txt'')
+data=d.read()
+#print("Start")
+#port="COM5"
+#data=serial.Serial(port, 115200)
+#print("Connected")
+#data.flushInput()
 #detectar el inicio de una linea
+
+
+
+
 flag=True
 while flag:
     received=data.read()
