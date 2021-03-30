@@ -2,33 +2,17 @@ import time
 import numpy as np
 import os
 import matplotlib.pyplot as plt
-d=os.popen('ampy --port COM5 get 'd.txt'')
-data=d.read()
-#print("Start")
-#port="COM5"
-#data=serial.Serial(port, 115200)
-#print("Connected")
-#data.flushInput()
-#detectar el inicio de una linea
-
-
-
-
-flag=True
-while flag:
-    received=data.read()
-    if(received==b'9'):
-        if(received==b'9'):
-            if(received==b'9'):
-                if(received==b'9'):
-                    flag=False
-                    data.write(b'ok')
-while True:
-#for i in range (20):
-    #print(i)
-    #print('pasa')
-    rece_data=data.read(4)
-    print(rece_data)
-    #data.write('on'.encode())
-    #time.sleep(0.1)
-    #data.write('off'.encode())
+import pandas as pd
+os.popen('ampy --port /dev/ttyS5 get data.txt d.txt')
+data = pd.read_csv('d.txt',sep=" ", header = None)
+data.columns=["Time","Angle"]
+time=data['Time']
+angle=data['Angle']
+plt.plot(time,angle)
+plt.savefig("datos.png",dpi=150)
+print(time)
+for i in range(len(time)):
+    print('%5i %5i'% (time[i],angle[i]))
+#data=data.replace("\n"," ")
+#data=np.asarray(data)
+#print(data[0][0:10])

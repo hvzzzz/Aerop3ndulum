@@ -11,6 +11,7 @@ time.sleep_ms(5000)
 #led.duty(1000)#0 es 0% 100% es 1023
 #time.sleep_ms(1000)
 #input(' espera x2')
+print("pass")
 while True:
     #para el motor min 54 max 117
     led.duty(70)
